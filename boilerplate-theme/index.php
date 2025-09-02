@@ -1,15 +1,8 @@
 <?php
-    get_header();
+get_header();
 ?>
-
-/**
- * 
- * 
- * Acts as home
- *
- *
- */
+<div>dit is grote BODY text</div>
 
 <?php
-    get_footer();
+get_footer();
 ?>
