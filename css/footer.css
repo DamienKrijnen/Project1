@@ -15,5 +15,22 @@ footer div {
 
 footer h2 {
     font-size: 16px;
-    margin: 0 0 10px 0;
+    margin: 0 0 10px 0; 
+}
+
+footer a {
+    font-size: 1rem;
+    text-decoration: none;
+    color: black;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer ul,
+footer ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
