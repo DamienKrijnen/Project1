@@ -23,6 +23,13 @@ get_header();
     </section>
 
 
+    <section class="menuCard">
+        <h1>Menukaart</h1>
+        <img src="<?php echo get_template_directory_uri() . './assets/images/grey_background.png'; ?>" alt="Dit is de menukaart van onze restaurant waar de klanten het aanbod kunnen bekijken">
+        <button><a href="<?php echo get_site_url() . '#'; ?>"> Download in PDF</a></button>
+    </section>
+
+
 </main>
 <?php
 get_footer();
