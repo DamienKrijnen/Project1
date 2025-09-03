@@ -29,7 +29,7 @@ get_header();
         <button class="menuCard-button"><a href="<?php echo get_site_url() . '#'; ?>"> Download in PDF</a></button>
         <div class="menuCard-reservation-background">
             <h1>Reserveer</h1>
-            <!-- <button class="menuCard-reservation-button"><a href="<?php echo get_site_url() . '#'; ?>"> 0118- 00 11 22 </a></button> -->
+            <button class="menuCard-reservation-button"><a href="<?php echo get_site_url() . '#'; ?>"> 0118- 00 11 22 </a></button>
         </div>
     </section>
     <!-- linking using get_site_url is a  specific wordpress function to define a URL source -->

@@ -162,10 +162,12 @@
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .image-center-large {
-    width: 90vw;
+    width: 65vw;
     height: 50vh;
     display: flex;
     margin: 2rem auto;
+   margin-bottom: 5rem;
+
   }
   .image-center-large img {
     width: 100%;
@@ -174,7 +176,7 @@
 
   .general-info {
     width: 90%;
-    min-height: 50vh;
+    min-height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -182,6 +184,7 @@
     text-align: center;
     display: flex;
     margin: 2rem auto;
+
   }
 
   .general-info-text {
@@ -213,11 +216,12 @@
     gap: 1rem;
     justify-content: center;
     margin: 0;
+    margin-top:inherit;
   }
   .general-info-img img {
-    margin-top: 10vh;
+    margin-top: auto;
     min-width: 0;
-    width: 50%;
+    width: 70%;
     height: 50%;
     margin: auto;
     object-fit: cover;
@@ -269,8 +273,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
     height: 10vh;
   }
 
@@ -280,7 +282,7 @@
     margin-bottom: 2rem;
     color: white;
     font-size: medium;
-    margin-left: 6rem;
+    margin-left: 0;
   }
 
   .menuCard-reservation-button {
@@ -288,12 +290,15 @@
     background-color: darkgrey;
     border-color: transparent;
     padding: 2px;
+    min-width: 25vw;
+    margin-right: 0;
+    height: 5vh;
   }
   .menuCard-reservation-button a {
     text-decoration: none;
     color: rgb(0, 0, 0);
-    font-size: x-large;
     font-weight: bold;
-    font-size: large;
+    font-size: xx-small;
+
   }
 }
