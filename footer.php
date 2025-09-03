@@ -23,7 +23,11 @@
 
 
             <div class="col-5" id="logo-image-footer">
-                <img src="<?php echo get_template_directory_uri() . './assets/images/false-logo.png'; ?>" alt="company profile">
+                <?php
+                $logo = get_option('company_logo_img');
+                if ($logo): ?>
+                    <img src="<?php echo esc_url($logo); ?>" alt="Company Logo">
+                <?php endif; ?>
             </div>
 
 

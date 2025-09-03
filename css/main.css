@@ -156,7 +156,7 @@ a:hover{
 
 .menuCard-reservation-background {
   display: flex;
-  background-image: url(../assets/images/background_contact_information.png);
+  background-image:var(--banner-image);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

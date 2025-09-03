@@ -14,6 +14,8 @@ add_action('wp_enqueue_scripts', function () {
     $top_color = get_option('company_top_color', '#ffffff');
     $text_color = get_option('company_text_color', '#ffffff');
     $title_color = get_option('company_title_color', '#ffffff');
+    $banner_image = get_option('company_text1_picture2_img');
+
 
 
 
@@ -28,7 +30,8 @@ add_action('wp_enqueue_scripts', function () {
             --top-color: {$top_color};
             --text-color: {$text_color};
             --title-color: {$title_color};
-
+            --title-color: {$title_color};
+            --banner-image: url('{$banner_image}');
         }
     ";
 
@@ -164,6 +167,79 @@ function company_settings_HTML()
                             class="large-text"><?php echo esc_textarea(get_option('company_second_text', '')); ?></textarea>
                     </td>
                 </tr>
+
+                <tr valign="top">
+                    <th scope="row">logo</th>
+                    <td>
+                        <input type="text" id="company_logo_img" name="company_logo_img" value="<?php echo esc_attr(get_option('company_logo_img')); ?>" style="width:60%;" />
+                        <button class="upload_image_button button" data-target="#company_logo_img">Upload of selecteer een foto</button>
+                        <br><small>kies een logo image</small>
+                    </td>
+                </tr>
+
+                <tr valign="top">
+                    <th scope="row">Main Foto</th>
+                    <td>
+                        <input type="text" id="company_main_img" name="company_main_img" value="<?php echo esc_attr(get_option('company_main_img')); ?>" style="width:60%;" />
+                        <button class="upload_image_button button" data-target="#company_main_img">Upload of selecteer een foto</button>
+                        <br><small>kies een logo image</small>
+                    </td>
+                </tr>
+
+                <tr valign="top">
+                    <th scope="row">Text 1 foto 1</th>
+                    <td>
+                        <input type="text" id="company_text1_picture1_img" name="company_text1_picture1_img" value="<?php echo esc_attr(get_option('company_text1_picture1_img')); ?>" style="width:60%;" />
+                        <button class="upload_image_button button" data-target="#company_text1_picture1_img">Upload of selecteer een foto</button>
+                        <br><small>kies een logo image</small>
+                    </td>
+                </tr>
+
+                <tr valign="top">
+                    <th scope="row">Text 1 foto 2</th>
+                    <td>
+                        <input type="text" id="company_text1_picture2_img" name="company_text1_picture2_img" value="<?php echo esc_attr(get_option('company_text1_picture2_img')); ?>" style="width:60%;" />
+                        <button class="upload_image_button button" data-target="#company_text1_picture2_img">Upload of selecteer een foto</button>
+                        <br><small>kies een logo image</small>
+                    </td>
+                </tr>
+
+                <tr valign="top">
+                    <th scope="row">Text 2 foto 2</th>
+                    <td>
+                        <input type="text" id="company_text2_picture1_img" name="company_text2_picture1_img" value="<?php echo esc_attr(get_option('company_text2_picture1_img')); ?>" style="width:60%;" />
+                        <button class="upload_image_button button" data-target="#company_text2_picture1_img">Upload of selecteer een foto</button>
+                        <br><small>kies een logo image</small>
+                    </td>
+                </tr>
+
+                <tr valign="top">
+                    <th scope="row">Text 2 foto 2</th>
+                    <td>
+                        <input type="text" id="company_text2_picture2_img" name="company_text2_picture2_img" value="<?php echo esc_attr(get_option('company_text2_picture2_img')); ?>" style="width:60%;" />
+                        <button class="upload_image_button button" data-target="#company_text2_picture2_img">Upload of selecteer een foto</button>
+                        <br><small>kies een logo image</small>
+                    </td>
+                </tr>
+
+                <tr valign="top">
+                    <th scope="row">banner image</th>
+                    <td>
+                        <input type="text" id="company_banner_img" name="company_banner_img" value="<?php echo esc_attr(get_option('company_banner_img')); ?>" style="width:60%;" />
+                        <button class="upload_image_button button" data-target="#company_banner_img">Upload of selecteer een foto</button>
+                        <br><small>kies een banner image</small>
+                    </td>
+                </tr>
+
+                <tr valign="top">
+                    <th scope="row">Upload menu pdf</th>
+                    <td>
+                        <input type="text" id="company_menu_pdf" name="company_menu_pdf" value="<?php echo esc_attr(get_option('company_menu_pdf')); ?>" style="width:60%;" />
+                        <button class="upload_file_button button" data-target="#company_menu_pdf">Upload PDF</button>
+                        <br><small>Selecteer een PDF-bestand</small>
+                    </td>
+                </tr>
+
             </table>
 
             <?php submit_button(); ?>
@@ -171,6 +247,25 @@ function company_settings_HTML()
     </div>
 <?php
 }
+
+
+add_action('admin_enqueue_scripts', function ($hook) {
+    // Only load on your settings page
+    if ($hook != 'toplevel_page_my-custom-page') return;
+
+    // Load WordPress media uploader
+    wp_enqueue_media();
+
+    // Load your custom JS for the upload button
+    wp_enqueue_script(
+        'company-media-upload',
+        get_template_directory_uri() . '/js/media-upload.js',
+        ['jquery'],
+        null,
+        true
+    );
+});
+
 
 add_action('admin_init', function () {
     register_setting('company_settings_group', 'company_background_color');
@@ -183,7 +278,18 @@ add_action('admin_init', function () {
     register_setting('company_settings_group', 'company_welcome_text');
     register_setting('company_settings_group', 'company_second_title');
     register_setting('company_settings_group', 'company_second_text');
+    register_setting('company_settings_group', 'company_logo_img');
+    register_setting('company_settings_group', 'company_main_img');
+    register_setting('company_settings_group', 'company_text1_picture1_img');
+    register_setting('company_settings_group', 'company_text1_picture2_img');
+    register_setting('company_settings_group', 'company_text2_picture1_img');
+    register_setting('company_settings_group', 'company_text2_picture2_img');
+    register_setting('company_settings_group', 'company_banner_img');
+    register_setting('company_settings_group', 'company_menu_pdf');
 });
+
+
+
 
 
 add_action('admin_menu', 'company_settings');

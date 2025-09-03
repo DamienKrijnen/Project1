@@ -5,7 +5,11 @@ get_header();
 <main>
     <section class="image-center-large">
         <!-- background using get_template_directory_uri specific wordpress function to define image source -->
-        <img src="<?php echo get_template_directory_uri() . './assets/images/background_restaurant.png'; ?>" alt="achtergrond van een restaurant">
+        <?php
+        $main_IMG = get_option('company_main_img');
+        if ($main_IMG): ?>
+            <img src="<?php echo esc_url($main_IMG); ?>" alt="Company Logo">
+        <?php endif; ?>
     </section>
 
 
@@ -16,16 +20,29 @@ get_header();
             <button class="general-info-button"><a href="<?php echo get_site_url() . '#'; ?>"> Contact </a></button>
         </div>
         <div class="general-info-img">
-            <img src="<?php echo get_template_directory_uri() . './assets/images/company_ceo.png'; ?>" alt="ceo and owner of the company Lucy">
-            <img src="<?php echo get_template_directory_uri() . './assets/images/company_ceo.png'; ?>" alt="ceo and owner of the company Lucy">
+            <?php
+            $picture1_text1 = get_option('company_text1_picture1_img');
+            if ($picture1_text1): ?>
+                <img src="<?php echo esc_url($picture1_text1); ?>" alt="Company Logo">
+            <?php endif; ?>
+            <?php
+            $picture2_text1 = get_option('company_text1_picture2_img');
+            if ($picture2_text1): ?>
+                <img src="<?php echo esc_url($picture2_text1); ?>" alt="Company Logo">
+            <?php endif; ?>
         </div>
-
     </section>
 
 
     <section class="menuCard">
         <h1>Menukaart</h1>
-        <img src="<?php echo get_template_directory_uri() . './assets/images/grey_background.png'; ?>" alt="Dit is de menukaart van onze restaurant waar de klanten het aanbod kunnen bekijken">
+        <?php $pdf_url = get_option('company_menu_pdf'); ?>
+        <?php if ($pdf_url): ?>
+            <iframe src="<?php echo esc_url($pdf_url); ?>" width="100%" height="600px">
+                Uw browser ondersteunt geen PDF-weergave. Download het menu
+                <a href="<?php echo esc_url($pdf_url); ?>">hier</a>.
+            </iframe>
+        <?php endif; ?>
         <button class="menuCard-button"><a href="<?php echo get_site_url() . '#'; ?>"> Download in PDF</a></button>
         <div class="menuCard-reservation-background">
             <h1>Reserveer</h1>
@@ -41,8 +58,16 @@ get_header();
             <button class="general-info-button"><a href="<?php echo get_site_url() . '#'; ?>"> Contact</a></button>
         </div>
         <div class="general-info-img">
-            <img src="<?php echo get_template_directory_uri() . './assets/images/company_ceo.png'; ?>" alt="ceo and owner of the company Lucy">
-            <img src="<?php echo get_template_directory_uri() . './assets/images/company_ceo.png'; ?>" alt="ceo and owner of the company Lucy">
+            <?php
+            $picture1_text2 = get_option('company_text2_picture1_img');
+            if ($picture1_text2): ?>
+                <img src="<?php echo esc_url($picture1_text2); ?>" alt="Company Logo">
+            <?php endif; ?>
+            <?php
+            $picture2_text2 = get_option('company_text2_picture2_img');
+            if ($picture2_text2): ?>
+                <img src="<?php echo esc_url($picture2_text2); ?>" alt="Company Logo">
+            <?php endif; ?>
         </div>
 
     </section>
