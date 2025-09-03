@@ -14,8 +14,8 @@
     <header>
         <div class="header-container">
             <div class="row">
-                <div class="col-5" id="logo-image">
-                    <img src="" alt="dit is omdat er geen image is momenteel">
+                <div class="col-5" id="logo-image-header">
+                    <img src="<?php echo get_template_directory_uri() . './assets/images/false-logo.png'; ?>" alt="company profile">
                 </div>
                 <div class="col" id="contact">
                     <div class=""><a href="#contact"> Contact </a></div>

@@ -20,8 +20,8 @@
             </div>
 
 
-            <div class="col-5" id="logo-image">
-                <img src="" alt="dit is omdat er geen image is momenteel">
+            <div class="col-5" id="logo-image-footer">
+                <img src="<?php echo get_template_directory_uri() . './assets/images/false-logo.png'; ?>" alt="company profile">
             </div>
 
         </div>
