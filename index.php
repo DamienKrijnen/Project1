@@ -5,7 +5,6 @@ get_header();
 <main>
     <section class="image-center-large">
         <!-- background using get_template_directory_uri specific wordpress function to define image source -->
-        <img class="col-6 col-md-4" src="<?php echo get_template_directory_uri() . './assets/images/background_restaurant.png'; ?>" alt="achtergrond van een restaurant">
         <img src="<?php echo get_template_directory_uri() . './assets/images/background_restaurant.png'; ?>" alt="achtergrond van een restaurant">
     </section>
 

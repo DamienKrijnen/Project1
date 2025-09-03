@@ -52,7 +52,6 @@ body{
   height: var(--height-body-elements);
   display: flex;
   margin: 5rem auto;
-
 }
 .image-center-large img {
   width: 100%;
