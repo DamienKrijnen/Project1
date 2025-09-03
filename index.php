@@ -3,19 +3,20 @@ get_header();
 
 ?>
 <main>
-    <section class="image-center-large container text-center">
+    <section class="image-center-large">
         <!-- background using get_template_directory_uri specific wordpress function to define image source -->
         <img class="col-6 col-md-4" src="<?php echo get_template_directory_uri() . './assets/images/background_restaurant.png'; ?>" alt="achtergrond van een restaurant">
+        <img src="<?php echo get_template_directory_uri() . './assets/images/background_restaurant.png'; ?>" alt="achtergrond van een restaurant">
     </section>
 
 
-    <section class="general-info coll-auto">
-        <div class="general-info-text col-6 col-md-4">
+    <section class="general-info">
+        <div class="general-info-text">
             <h1><?php echo esc_html(get_option('company_welcome_title', '')); ?></h1>
             <p><?php echo esc_html(get_option('company_welcome_text', '')); ?></p>
             <button class="general-info-button"><a href="<?php echo get_site_url() . '#'; ?>"> Contact </a></button>
         </div>
-        <div class="general-info-img col-6 col-md-4">
+        <div class="general-info-img">
             <img src="<?php echo get_template_directory_uri() . './assets/images/company_ceo.png'; ?>" alt="ceo and owner of the company Lucy">
             <img src="<?php echo get_template_directory_uri() . './assets/images/company_ceo.png'; ?>" alt="ceo and owner of the company Lucy">
         </div>
