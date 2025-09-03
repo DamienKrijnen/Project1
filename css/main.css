@@ -160,7 +160,7 @@
   font-weight: bold;
   font-size: large;
 }
-@media screen and (min-width: 320px) and (max-width: 480px) {
+@media screen and (min-width: 320px) and (max-width: 660px) {
   .image-center-large {
     width: 65vw;
     height: 50vh;
@@ -207,6 +207,9 @@
     height: 10vw;
     background-color: grey;
     font-size: medium;
+    margin-bottom: 3rem;
+    display: block;
+    margin: 0 auto 3rem;
   }
   .general-info-img {
     display: flex;
