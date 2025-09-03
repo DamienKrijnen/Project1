@@ -3,7 +3,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #f2f2f2;
+    background-color: var(--top-color);
     border-bottom: 1px solid #ccc;
     flex-wrap: wrap;
 }
@@ -11,20 +11,18 @@ header {
 header div {
     flex: 1;
     margin: 0 10px;
+    align-content: center;
 }
 
 header a{
     font-size: 2rem;
     text-decoration: none;
-    color: black;
+    color: var(--link-color);
 }
 
-header a:hover{
-    text-decoration: underline;
-}
 
 #Telefoon{
-    background-color: darkgray;
+    background-color: var(--button-color);
     padding:15px;
 }
 

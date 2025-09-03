@@ -3,10 +3,12 @@
     <div class="footer-container">
         <div class="row">
             <div class="col" id="contactinfo">
-                <H2>hier vind je alle contact informatie:</H2>
-                <H2>Email: <? $email ?></H2>
-                <H2>Telefoon nummer: <? $phonenumber ?></H2>
-                <H2>Adress: <? $adress ?></H2>
+                <H2>Snel naar:</H2>
+                <ul>
+                    <li>Home </li>
+                    <li>Menu </li>
+                    <li> Werken bij</li>
+                </ul>
             </div>
 
 
@@ -24,9 +26,9 @@
                 <img src="<?php echo get_template_directory_uri() . './assets/images/false-logo.png'; ?>" alt="company profile">
             </div>
 
+
         </div>
     </div>
-
 </footer>
 
 <?php wp_footer(); ?>

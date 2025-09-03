@@ -28,13 +28,23 @@
   align-items: center;
   
 }
+text, p, div, pre, span, strong, input, textarea, li, ul, b{
+  color: var(--text-color)
+}
+
+h1, h2, h3, h4, h5, h6{
+  color: var(--title-color)
+}
+
+body{
+  background-color: var(--background-color);
+}
 .image-center-large {
   width: var(--width-body-elements);
   height: var(--height-body-elements);
   display: flex;
   margin: 5rem auto;
 
- 
 }
  
 .image-center-large img {
@@ -71,10 +81,19 @@
 .general-info-button {
   width: 11vw;
   height: 3vw;
-  background-color: grey;
+  background-color: var(--button-color);
   margin-top: 4vh;
   font-size: large;
 }
+
+a{
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
 .general-info-img {
   display: flex;
   width: 30vw;
@@ -113,7 +132,7 @@
 .menuCard-button {
   width: 16vw;
   height: 9vh;
-  background-color: grey;
+  background-color: var(--button-color);
   margin-top: 4vh;
   margin-bottom: 4vh;
   font-size: large;
@@ -125,7 +144,6 @@
 
 .menuCard-button a {
   text-decoration: none;
-  color: black;
   font-size: x-large;
   font-weight: bold;
 }
@@ -154,14 +172,14 @@
 .menuCard-reservation-button {
   border-radius: none;
   margin-right: 6rem;
-  background-color: darkgrey;
+  background-color: var(--button-color);
   border-color: transparent;
   padding: 14px;
   width: 12vw;
 }
 .menuCard-reservation-button a {
   text-decoration: none;
-  color: rgb(0, 0, 0);
+  color: var(--text-color);
   font-size: x-large;
   font-weight: bold;
   font-size: large;

@@ -27,10 +27,10 @@
                     <div class=""><a href="#over-ons"> Over ons </a></div>
                 </div>
 
-
                 <div class="col" id="Telefoon">
-                    <div class="">Telefoon nummer hier vullen</div>
+                    <a href="#over-ons"> 0118 34 534 52 </a>
                 </div>
             </div>
+        </div>
         </div>
     </header>
